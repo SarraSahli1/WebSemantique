@@ -1,0 +1,546 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.semanticweb.org/#"
+    xmlns:j.1="http://www.semanticweb.org/#l&apos;"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:untitled-ontology-13="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Source_Énergie_Renouvelable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#SourceEnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ObjectifParConsommation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#ObjectifRéductionCarbone"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#IsolationLogement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#ConseilEconomieEnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ContratGaz">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#ContratÉnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Logement"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ObjectifMensuel">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ObjectifRéductionCarbone"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#FournisseurEnergie"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#AppareilConnecté"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#VoitureÉlectrique">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#TransportDurable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#TarifHoraire">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#Facture_Énergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#OptimisationElectroménagers">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ConseilEconomieEnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#électriques">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#bus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Device"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#l&apos;éolien">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Source_Énergie_Renouvelable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#pétrole">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#EnergieNonRenouvelable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ConsommationTransport">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#Consommation_Énergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ConsommationDevice">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Climatiseur">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#bus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#TransportEnCommun"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#TransportNonDurable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#Transport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#CréditTaxeÉnergieRenouvelable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#SubventionÉnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ConsommationTransportPublic">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ConsommationTransport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ÉmissionCO2">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#PollutionAtmosphérique"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#TarifÉnergieRenouvelable">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Facture_Énergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#CompteurIntelligent">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#AppareilConnecté"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Réfrigérateur">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ÉmissionNOx">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#PollutionAtmosphérique"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#VéloÉlectrique">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#TransportDurable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Bus">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportNonDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#BilanAnnuel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#BilanÉnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Essence">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#Voiture"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Four">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ÉolienneDomestique">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#ProductionEnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Empreinte_Carbone"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#TransportDurable">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Transport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#AideRénovationÉnergétique">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#SubventionÉnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#LaveLinge">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Feedback"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#PanneauxSolaire">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ProductionEnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#EnergieNonRenouvelable">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#SourceEnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#l&apos;hydroélectricité">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Source_Énergie_Renouvelable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#User"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#TransportEnCommun">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ContratÉlectricité">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ContratÉnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Appartement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Logement"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Disel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#Voiture"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Metro">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportNonDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#OptimisationChauffage">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ConseilEconomieEnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ConsommationHabitat">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#à_faible_émission">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#bus"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Voiture">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportNonDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#SystèmeHydrogène">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/#BatterieStockageÉnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Moto">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportNonDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#MaisonIndividuelle">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Logement"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#BilanMensuel">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#BilanÉnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ContratÉnergiesRenouvelables">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ContratÉnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ConsommationVéhiculePersonnel">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ConsommationTransport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#TarifFixe">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Facture_Énergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Train">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportNonDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#BilanParCatégorie">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#BilanÉnergie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Avion">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportNonDurable"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Habitat"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/#Métros">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#TransportEnCommun"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ObjectifAnnuel">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#ObjectifRéductionCarbone"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#ThermostatIntelligent">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#AppareilConnecté"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/#BatterieDomestique">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#BatterieStockageÉnergie"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Utilisé">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#donneFeedbackSur">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Source_Énergie_Renouvelable"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#ConseilEconomieEnergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#consomme">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#User"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Transport"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#SourceEnergie"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Habitat"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Appliqué_à">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Transport"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Device"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#ConseilEconomieEnergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#seDeplaceEn">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Transport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Contient">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Habitat"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Facture_Énergie"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Device"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Émise_par">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#FournisseurEnergie"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Facture_Énergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#aFacture">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Facture_Énergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#produitCO2">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Empreinte_Carbone"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Fait_partie_de">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#BilanÉnergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#utilise">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Transport"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Transport"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#SourceEnergie"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Habitat"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Habitat"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Device"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Alimente">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Source_Énergie_Renouvelable"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Fournit">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#FournisseurEnergie"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Est_liée_à">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Facture_Énergie"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Produit">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#SourceEnergie"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#ProductionEnergie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#aPourSource">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Source_Énergie_Renouvelable"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Empreinte_Carbone"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Émet">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Transport"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#PollutionAtmosphérique"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Empreinte_Carbone"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Device"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#Consommation_Énergie"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#ConsommationTransport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#habite_Dans">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#User"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/#Concernant">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/#Device"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/#ConseilEconomieEnergie"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#distance_parcourue"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#fournisseur"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#consommation_énergétique"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#potentiel_de_réduction_CO2"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#type_d’énergie_Renouvelable"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#MDP"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#prénom"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#type_d’énergie"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#tarif">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#score"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#coût_d&apos;installation"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#durée_d’utilisation"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#adresse"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#type_d’appareil"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#nom_du_fournisseur">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#rôle"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#description_du_conseil">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#énergie_consommée_(kWh)"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#économie_potentielle_(kWh_ou_CO2)">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#nom"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#commentaire"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#énergie_utilisée"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#source_d’émission"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#montant"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#puissance"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#date"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#CO2_émis"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#type_Logement"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/#email"/>
+  <j.0:Bus rdf:about="http://www.semanticweb.org/#bus1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Bus>
+  <j.0:FournisseurEnergie rdf:about="http://www.semanticweb.org/#Fournisseur1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:FournisseurEnergie>
+  <j.0:VoitureÉlectrique rdf:about="http://www.semanticweb.org/#voitureElectrique1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:VoitureÉlectrique>
+  <j.0:ContratÉnergiesRenouvelables rdf:about="http://www.semanticweb.org/#CER">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ContratÉnergiesRenouvelables>
+  <j.0:Disel rdf:about="http://www.semanticweb.org/#voiture2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Disel>
+  <j.0:Climatiseur rdf:about="http://www.semanticweb.org/#climatiseur1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Climatiseur>
+  <j.1:éolien rdf:about="http://www.semanticweb.org/#eolient1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:éolien>
+  <j.0:User rdf:about="http://www.semanticweb.org/#User2"/>
+  <j.0:Feedback rdf:about="http://www.semanticweb.org/#feedback1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Feedback>
+  <j.0:Bus rdf:about="http://www.semanticweb.org/#bus2"/>
+  <j.0:PanneauxSolaire rdf:about="http://www.semanticweb.org/#Panneaux_Solaire1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:PanneauxSolaire>
+  <j.0:Métros rdf:about="http://www.semanticweb.org/#metro2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Métros>
+  <j.0:User rdf:about="http://www.semanticweb.org/#2"/>
+  <j.0:User rdf:about="http://www.semanticweb.org/#user1">
+    <rdfs:comment></rdfs:comment>
+    <untitled-ontology-13:prénom></untitled-ontology-13:prénom>
+    <untitled-ontology-13:email></untitled-ontology-13:email>
+    <untitled-ontology-13:nom></untitled-ontology-13:nom>
+    <untitled-ontology-13:MDP></untitled-ontology-13:MDP>
+    <untitled-ontology-13:rôle></untitled-ontology-13:rôle>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:User>
+  <j.0:ÉolienneDomestique rdf:about="http://www.semanticweb.org/#ED">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ÉolienneDomestique>
+  <j.0:Avion rdf:about="http://www.semanticweb.org/#avion1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Avion>
+  <j.0:SystèmeHydrogène rdf:about="http://www.semanticweb.org/#SH">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:SystèmeHydrogène>
+  <j.0:Metro rdf:about="http://www.semanticweb.org/#metro1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Metro>
+  <j.0:ÉmissionCO2 rdf:about="http://www.semanticweb.org/#CO2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ÉmissionCO2>
+  <j.0:IsolationLogement rdf:about="http://www.semanticweb.org/#IL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:IsolationLogement>
+  <j.0:ConsommationHabitat rdf:about="http://www.semanticweb.org/#CH">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ConsommationHabitat>
+  <j.0:AideRénovationÉnergétique rdf:about="http://www.semanticweb.org/#aide1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:AideRénovationÉnergétique>
+  <j.0:User rdf:about="http://www.semanticweb.org/#User3">
+    <j.0:type>aziz</j.0:type>
+  </j.0:User>
+  <j.0:ThermostatIntelligent rdf:about="http://www.semanticweb.org/#Thermostat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ThermostatIntelligent>
+  <j.0:VéloÉlectrique rdf:about="http://www.semanticweb.org/#veloElectrique1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:VéloÉlectrique>
+  <j.0:BilanMensuel rdf:about="http://www.semanticweb.org/#BM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:BilanMensuel>
+  <j.0:Empreinte_Carbone rdf:about="http://www.semanticweb.org/#empreinte1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Empreinte_Carbone>
+  <j.0:bus rdf:about="http://www.semanticweb.org/#"/>
+  <j.0:ContratGaz rdf:about="http://www.semanticweb.org/#CG">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ContratGaz>
+  <j.0:ObjectifAnnuel rdf:about="http://www.semanticweb.org/#objectifA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ObjectifAnnuel>
+  <j.0:Bus rdf:about="http://www.semanticweb.org/#bus3">
+    <j.0:name></j.0:name>
+  </j.0:Bus>
+  <j.0:Four rdf:about="http://www.semanticweb.org/#four1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Four>
+  <j.0:CréditTaxeÉnergieRenouvelable rdf:about="http://www.semanticweb.org/#credit1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:CréditTaxeÉnergieRenouvelable>
+  <j.0:MaisonIndividuelle rdf:about="http://www.semanticweb.org/#maison1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:MaisonIndividuelle>
+  <j.0:Train rdf:about="http://www.semanticweb.org/#train1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Train>
+  <j.0:TarifHoraire rdf:about="http://www.semanticweb.org/#TH">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:TarifHoraire>
+  <j.0:BatterieDomestique rdf:about="http://www.semanticweb.org/#BD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:BatterieDomestique>
+  <j.0:Réfrigérateur rdf:about="http://www.semanticweb.org/#refregirateur1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Réfrigérateur>
+  <j.0:BilanParCatégorie rdf:about="http://www.semanticweb.org/#BC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:BilanParCatégorie>
+  <j.0:OptimisationElectroménagers rdf:about="http://www.semanticweb.org/#OE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:OptimisationElectroménagers>
+  <j.1:hydroélectricité rdf:about="http://www.semanticweb.org/#hydroelectricite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:hydroélectricité>
+  <j.0:Appartement rdf:about="http://www.semanticweb.org/#appartement1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Appartement>
+  <j.0:ObjectifParConsommation rdf:about="http://www.semanticweb.org/#objectifC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ObjectifParConsommation>
+  <j.0:ContratÉlectricité rdf:about="http://www.semanticweb.org/#CE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ContratÉlectricité>
+  <j.0:ConsommationDevice rdf:about="http://www.semanticweb.org/#CD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ConsommationDevice>
+  <j.0:ÉmissionNOx rdf:about="http://www.semanticweb.org/#NOx">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ÉmissionNOx>
+  <j.0:ObjectifMensuel rdf:about="http://www.semanticweb.org/#objectifM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ObjectifMensuel>
+  <j.0:pétrole rdf:about="http://www.semanticweb.org/#petrole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:pétrole>
+  <j.0:Moto rdf:about="http://www.semanticweb.org/#moto1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Moto>
+  <j.0:TarifFixe rdf:about="http://www.semanticweb.org/#TF">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:TarifFixe>
+  <j.0:CompteurIntelligent rdf:about="http://www.semanticweb.org/#Compteur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:CompteurIntelligent>
+  <j.0:TarifÉnergieRenouvelable rdf:about="http://www.semanticweb.org/#TE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:TarifÉnergieRenouvelable>
+  <j.0:ConsommationTransport rdf:about="http://www.semanticweb.org/#CT">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:ConsommationTransport>
+  <j.0:électriques rdf:about="http://www.semanticweb.org/#buselectrique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:électriques>
+  <j.0:BilanAnnuel rdf:about="http://www.semanticweb.org/#BA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:BilanAnnuel>
+  <j.0:LaveLinge rdf:about="http://www.semanticweb.org/#lavemminge1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:LaveLinge>
+  <j.0:Essence rdf:about="http://www.semanticweb.org/#voiture1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:Essence>
+  <j.0:OptimisationChauffage rdf:about="http://www.semanticweb.org/#OC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.0:OptimisationChauffage>
+  <j.0:gaz_naturel rdf:about="http://www.semanticweb.org/#gaz_naturel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#EnergieNonRenouvelable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </j.0:gaz_naturel>
+  <j.0:charbon rdf:about="http://www.semanticweb.org/#charbon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#EnergieNonRenouvelable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </j.0:charbon>
+  <j.0:solaire rdf:about="http://www.semanticweb.org/#solaire">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/#Source_Énergie_Renouvelable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </j.0:solaire>
+</rdf:RDF>

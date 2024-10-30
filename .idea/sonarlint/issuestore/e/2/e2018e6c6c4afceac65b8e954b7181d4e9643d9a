@@ -1,0 +1,13 @@
+
+
+java:S1192"HDefine a constant instead of duplicating this literal "JohnDoe" 3 times.(Í¡Œ¯üÿÿÿÿ8­ƒé­2J$5242ceb2-5e6d-4f39-ab0c-f37205a97c86
+
+java:S1192"GDefine a constant instead of duplicating this literal "Person" 3 times.(Í¡Œ¯üÿÿÿÿ8®ƒé­2J$bc94681f-aa37-48d7-b29f-8961ad8018b8
+s
+java:S1874"+Remove this use of "get"; it is deprecated.(Ô­“úÿÿÿÿ8˜„é­2J$5a880461-c814-4073-a30c-dfffaaef01d6
+r	java:S106 "+Replace this use of System.out by a logger.(Ç³”Øüÿÿÿÿ8œ„é­2J$8e8529c6-dba9-44ee-a62b-7c4d897d117f
+r	java:S106""+Replace this use of System.err by a logger.(œÿĞúÿÿÿÿ8„é­2J$a75a09f4-0ecc-4fcc-aa4c-b6b506e41497
+m	java:S106,"+Replace this use of System.out by a logger.(ò…‡8«„é­2J$3d796a93-570f-41e7-8909-ccc6feb1e940
+l	java:S106;"+Replace this use of System.out by a logger.(Øé;8²„é­2J$144e1632-e346-4979-b6c7-b35a23817e65
+r	java:S106M"+Replace this use of System.out by a logger.(®Ñª¼øÿÿÿÿ8¸„é­2J$01bfa2b8-29c9-4587-84b6-c217380833bd
+r	java:S106U"+Replace this use of System.out by a logger.(ÓÕû¬şÿÿÿÿ8¼„é­2J$b90e4aba-c9f1-4c8a-967b-f49d73fd0200
