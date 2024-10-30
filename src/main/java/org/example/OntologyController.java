@@ -2,13 +2,19 @@ package org.example;
 
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.springframework.beans.PropertyValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,5 +46,84 @@ public class OntologyController {
 
         return response;
     }
+    // Endpoint to get data properties for a specific class
+    @GetMapping("/data-properties/{className}")
+    public String[] getDataProperties(@PathVariable String className) {
+        String[] properties = ontologyManager.getDataProperties(className);
+        return properties;
+    }
+    // Endpoint to check if a class exists in the ontology
+    @GetMapping("/api/classes/exist")
+    public ResponseEntity<Boolean> checkClassExists(@RequestParam String className) {
+        logger.info("Checking if class exists: {}", className);
 
+        boolean exists = ontologyManager.classExists(className); // Call the existing method
+
+        logger.info("Class {} exists: {}", className, exists);
+        return ResponseEntity.ok(exists);
+    }
+    @GetMapping("/api/classes/individuals")
+    public ResponseEntity<List<String>> listClassesAndIndividuals() {
+        logger.info("Listing all classes and their individuals...");
+
+        List<String> response = ontologyManager.listClassesAndIndividuals(); // Call the existing method that returns a simple structure
+
+        return ResponseEntity.ok(response);
+    }
+    @PostMapping("/individuals")
+    public ResponseEntity<String> createIndividual(
+            @RequestParam String className,
+            @RequestParam String individualName,
+            @RequestBody Map<String, String> properties) {
+        try {
+            ontologyManager.createIndividual(className, individualName, properties);
+            return ResponseEntity.ok("Individual created: " + individualName);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating individual: " + e.getMessage());
+        }
+    }
+    @GetMapping("/individuals/{className}")
+    public ResponseEntity<List<Map<String, Object>>> readIndividuals(@PathVariable String className) {
+        List<Map<String, Object>> individualsList = new ArrayList<>();
+
+        if (!ontologyManager.classExists(className)) {
+            return ResponseEntity.badRequest().body(null);
+        }
+
+        try {
+            // Call the existing readIndividuals method to get the individuals
+            List<Map<String, Object>> individuals = ontologyManager.readIndividuals(className);
+            individualsList.addAll(individuals);
+
+            return ResponseEntity.ok(individualsList);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null);
+        }
+    }
+    @PutMapping("update/{className}/{individualName}")
+    public ResponseEntity<String> updateIndividual(
+            @PathVariable String className,
+            @PathVariable String individualName,
+            @RequestParam String propertyName,
+            @RequestParam String newValue) {
+
+        try {
+            ontologyManager.updateIndividual(className, individualName, propertyName, newValue);
+            return ResponseEntity.ok("Individual updated successfully: " + individualName);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error updating individual: " + e.getMessage());
+        }
+    }
+    @DeleteMapping("delete/individuals/{individualName}")
+    public ResponseEntity<String> deleteIndividual(@PathVariable String individualName) {
+        try {
+            ontologyManager.deleteIndividual(individualName);
+            return ResponseEntity.ok("Individu supprimé : " + individualName);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Erreur lors de la suppression de l'individu : " + e.getMessage());
+        }
+    }
 }

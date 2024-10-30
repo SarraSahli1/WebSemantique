@@ -1,0 +1,25 @@
+
+„
+java:S14884"bImmediately return this expression instead of assigning it to the temporary variable "properties".(ÑÂÌ´ÿÿÿÿÿ8šÂö÷­2
+W
+java:S22094"5Change this instance-reference to a static reference.(ÑÂÌ´ÿÿÿÿÿ8²Âö÷­2
+W
+java:S2209<"5Change this instance-reference to a static reference.(¡Á«úÿÿÿÿÿ8³Âö÷­2
+W
+java:S2209E"5Change this instance-reference to a static reference.(Ú¾èøÿÿÿÿ8³Âö÷­2
+R
+java:S2209O"5Change this instance-reference to a static reference.(Êğ®8Ù½©ø­2
+R
+java:S2209Y"5Change this instance-reference to a static reference.(Š«ıÒ8Ï®ø­2
+W
+java:S2209_"5Change this instance-reference to a static reference.(Ò–Áüùÿÿÿÿ8Ï®ø­2
+W
+java:S2209p"5Change this instance-reference to a static reference.(µÌşÎüÿÿÿÿ8ÍİÄø­2
+R
+java:S2209z"5Change this instance-reference to a static reference.(öàü®8çÓÒø­2
+Z
+java:S1128"=Remove this unused import 'org.apache.jena.util.FileManager'.(İéª¥8ÍİÄø­2
+a
+java:S1128"DRemove this unused import 'org.springframework.beans.PropertyValue'.(ü×8ÍİÄø­2
+M
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8ÍİÄø­2

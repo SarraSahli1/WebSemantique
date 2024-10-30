@@ -6,27 +6,21 @@ import org.apache.jena.update.*;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.rdf.model.*; // Assurez-vous d'importer les classes nécessaires
-import org.springframework.beans.PropertyValue;
+import java.util.*;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class OntologyManager {
+    private static Scanner scanner = new Scanner(System.in); // Initialize the scanner
 
     private static final String ONTOLOGY_PATH = "src/main/resources/webbb3.owl";
     private static final String NAMESPACE = "http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#";
     private static Model model;
-    private static Scanner scanner;
 
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
@@ -54,15 +48,20 @@ public class OntologyManager {
 
             switch (choice) {
                 case 1:
-                    // Create Individual
-                    System.out.print("Enter class name: ");
-                    String createClass = scanner.nextLine();
-                    System.out.print("Enter individual name: ");
-                    String createName = scanner.nextLine();
-                    createIndividual(createClass, createName);
+                    // Create Individual using a method that receives parameters
+                    String createClass = "ClassName"; // Example value, replace with actual class name
+                    String createName = "IndividualName"; // Example value, replace with actual individual name
+                    Map<String, String> properties = new HashMap<>(); // Initialize properties map
+
+                    // You can populate the properties map with necessary values
+                    properties.put("property1", "value1"); // Example property
+                    properties.put("property2", "value2"); // Example property
+
+                    // Call the createIndividual method with the properties map
+                    createIndividual(createClass, createName, properties);
                     break;
 
-                case 2:
+            case 2:
                     // Read Individuals
                     System.out.print("Enter class name: ");
                     String readClass = scanner.nextLine();
@@ -268,8 +267,8 @@ public class OntologyManager {
     }
 
     // Method to list all classes and their individuals with properties
-    public static void listClassesAndIndividuals() {
-        System.out.println("Classes and Individuals in the Ontology:");
+    public static List<String> listClassesAndIndividuals() {
+        List<String> result = new ArrayList<>();
 
         // Requête SPARQL pour récupérer toutes les classes
         String classQuery =
@@ -285,7 +284,8 @@ public class OntologyManager {
             while (classResults.hasNext()) {
                 QuerySolution classSolution = classResults.nextSolution();
                 Resource cls = classSolution.getResource("class");
-                System.out.println("Class: " + cls.getLocalName());
+                String className = cls.getLocalName();
+                result.add("Class: " + className);
 
                 // Requête SPARQL pour récupérer les individus de cette classe
                 String individualQuery =
@@ -300,7 +300,7 @@ public class OntologyManager {
                     while (individualResults.hasNext()) {
                         QuerySolution individualSolution = individualResults.nextSolution();
                         Resource individual = individualSolution.getResource("individual");
-                        System.out.println("  Individual: " + individual.getLocalName());
+                        result.add("  Individual: " + individual.getLocalName());
 
                         // Requête SPARQL pour lister les propriétés de l'individu
                         String propertyQuery =
@@ -316,14 +316,17 @@ public class OntologyManager {
                                 QuerySolution propertySolution = propertyResults.nextSolution();
                                 String predicate = propertySolution.getResource("predicate").getLocalName();
                                 RDFNode objectNode = propertySolution.get("object");
-                                System.out.println("    " + predicate + ": " + objectNode.toString());
+                                result.add("    " + predicate + ": " + objectNode.toString());
                             }
                         }
                     }
                 }
             }
         }
+
+        return result;
     }
+
 
     public static void displayProperties(String className) {
         System.out.println("Data Properties for class " + className + ":");
@@ -374,10 +377,10 @@ public class OntologyManager {
 
     // CREATE: Add a new individual
 // CREATE: Add a new individual
-    public static void createIndividual(String className, String individualName) {
+    public static String createIndividual(String className, String individualName, Map<String, String> properties) {
         if (!classExists(className)) {
             System.out.println("La classe " + className + " n'existe pas dans l'ontologie.");
-            return;
+            return className;
         }
 
         // Créer un Dataset à partir du modèle existant
@@ -396,17 +399,18 @@ public class OntologyManager {
         // Récupérer les propriétés de données pour la classe donnée
         String[] dataProperties = getDataProperties(className);
 
-        // Demander à l'utilisateur les valeurs des propriétés
+        // Utiliser les propriétés fournies dans la requête
         for (String property : dataProperties) {
-            System.out.print("Enter value for property '" + property + "': ");
-            String value = scanner.nextLine();
+            String value = properties.get(property); // Get the value from the properties map
 
-            // Ajouter chaque propriété à la requête
-            String insertProperty = "PREFIX ns: <" + NAMESPACE + "> " +
-                    "INSERT { " +
-                    "  ns:" + individualName + " ns:" + property + " \"" + value + "\" . " +
-                    "} WHERE { }";
-            updateRequest.add(insertProperty);
+            if (value != null) {
+                // Ajouter chaque propriété à la requête
+                String insertProperty = "PREFIX ns: <" + NAMESPACE + "> " +
+                        "INSERT { " +
+                        "  ns:" + individualName + " ns:" + property + " \"" + value + "\" . " +
+                        "} WHERE { }";
+                updateRequest.add(insertProperty);
+            }
         }
 
         // Exécuter la requête de mise à jour sur le dataset
@@ -417,7 +421,9 @@ public class OntologyManager {
         saveOntology();
 
         System.out.println("Individual created: " + individualName);
+        return className;
     }
+
     // UPDATE: Update properties of an existing individual
 
 
@@ -488,12 +494,7 @@ public class OntologyManager {
         System.out.println("Propriétés actuelles de l'individu " + individualName + ":");
         displayIndividualProperties(individual);
 
-        System.out.print("Êtes-vous sûr de vouloir supprimer cet individu ? (oui/non): ");
-        String confirmation = scanner.nextLine();
-        if (!confirmation.equalsIgnoreCase("oui")) {
-            System.out.println("Suppression annulée.");
-            return;
-        }
+
 
         // Créer la requête SPARQL DELETE
         String sparqlDelete = "PREFIX ns: <" + NAMESPACE + "> " +
@@ -526,10 +527,11 @@ public class OntologyManager {
     }
 
     // READ: Read individuals of a specific class
-    public static void readIndividuals(String className) {
+    public static List<Map<String, Object>> readIndividuals(String className) {
+        List<Map<String, Object>> individualsList = new ArrayList<>();
+
         if (!classExists(className)) {
-            System.out.println("La classe " + className + " n'existe pas dans l'ontologie.");
-            return;
+            throw new RuntimeException("La classe " + className + " n'existe pas dans l'ontologie.");
         }
 
         String queryString = String.format(
@@ -544,16 +546,44 @@ public class OntologyManager {
                 while (results.hasNext()) {
                     QuerySolution soln = results.nextSolution();
                     Resource individual = soln.getResource("individual");
-                    System.out.println("Individual: " + individual.getLocalName());
 
-                    // Now retrieve and display the properties of the individual
-                    displayIndividualProperties(individual);
+                    // Create a map to hold individual data
+                    Map<String, Object> individualData = new HashMap<>();
+                    individualData.put("individualName", individual.getLocalName());
+
+                    // Retrieve properties for the individual
+                    String[] properties = getDataProperties(className); // Assuming this method returns property names
+
+                    // Loop through properties and fetch their values
+                    for (String property : properties) {
+                        // Query to get the property value
+                        String propertyValueQuery = String.format(
+                                "PREFIX ns: <%s> " +
+                                        "SELECT ?value WHERE { " +
+                                        "  ns:%s ns:%s ?value . }",
+                                NAMESPACE, individual.getLocalName(), property);
+
+                        Query propertyQuery = QueryFactory.create(propertyValueQuery);
+                        try (QueryExecution propertyQexec = QueryExecutionFactory.create(propertyQuery, model)) {
+                            ResultSet propertyResults = propertyQexec.execSelect();
+                            if (propertyResults.hasNext()) {
+                                QuerySolution propertySoln = propertyResults.nextSolution();
+                                individualData.put(property, propertySoln.get("value").toString());
+                            }
+                        }
+                    }
+
+                    // Add the individual data map to the list
+                    individualsList.add(individualData);
                 }
             }
         } catch (Exception e) {
-            System.err.println("Error executing query: " + e.getMessage());
+            throw new RuntimeException("Error executing query: " + e.getMessage());
         }
+        return individualsList; // Return the list of individuals and their properties
     }
+
+
 
 
     private static void addOrUpdateObjectProperty(Scanner scanner, boolean isAdd) {
