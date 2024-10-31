@@ -17,3 +17,5 @@ F
 application.properties,2\f\2f692484526a88bd040e1ec9f8c211bca74f6755
 b
 2src/main/java/org/example/OntologyApplication.java,0\3\03ce30afdf6ecdee0b9133ec95ca6a5b47d729cf
+X
+(src/main/java/org/example/WebConfig.java,2\a\2a070fe562f1c27aea10559ce3e95332edc9440f

@@ -1,38 +1,38 @@
 
-c	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(ó²ñ‹8‡»¹ø­2
-c	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(Ñ•Ü8ˆ»¹ø­2
+c	java:S112‘"FDefine and throw a dedicated exception instead of using a generic one.(ó²ñ‹8‡»¹ø­2
+c	java:S112À"FDefine and throw a dedicated exception instead of using a generic one.(Ñ•Ü8ˆ»¹ø­2
 š
-java:S1192º"|Define a constant instead of duplicating this literal "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " 14 times.(¯¯ À8íÛ‰ø­2
+java:S1192µ"|Define a constant instead of duplicating this literal "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " 15 times.(¯¯ À8íÛ‰ø­2
 g
-java:S1192Ê"IDefine a constant instead of duplicating this literal "property" 5 times.(—•Úş8îÛ‰ø­2
-Œ
-java:S1192¼"nDefine a constant instead of duplicating this literal "PREFIX owl: <http://www.w3.org/2002/07/owl#> " 9 times.(¯ú¼ò8ş½‰ø­2
+java:S1192Å"IDefine a constant instead of duplicating this literal "property" 6 times.(—•Úş8îÛ‰ø­2
+
+java:S1192·"oDefine a constant instead of duplicating this literal "PREFIX owl: <http://www.w3.org/2002/07/owl#> " 10 times.(¯ú¼ò8ş½‰ø­2
 x
-java:S1192¿"ZDefine a constant instead of duplicating this literal "  ?property rdfs:domain <" 4 times.(ÂèàÈ8ş½‰ø­2
+java:S1192º"ZDefine a constant instead of duplicating this literal "  ?property rdfs:domain <" 4 times.(ÂèàÈ8ş½‰ø­2
 o
-java:S1192¹"LDefine a constant instead of duplicating this literal "L'individu " 3 times.(—ÏŞ½ûÿÿÿÿ8îÛ‰ø­2
+java:S1192´"LDefine a constant instead of duplicating this literal "L'individu " 3 times.(—ÏŞ½ûÿÿÿÿ8îÛ‰ø­2
 g
-java:S1192ö"IDefine a constant instead of duplicating this literal "WHERE { " 8 times.(ò­Ÿ8ş½‰ø­2
+java:S1192ñ"IDefine a constant instead of duplicating this literal "WHERE { " 9 times.(ò­Ÿ8ş½‰ø­2
 n
-java:S1192ş"KDefine a constant instead of duplicating this literal "La classe " 3 times.(Ö‡’Šøÿÿÿÿ8îÛ‰ø­2
+java:S1192ù"KDefine a constant instead of duplicating this literal "La classe " 3 times.(Ö‡’Šøÿÿÿÿ8îÛ‰ø­2
 k
-java:S1192‰"MDefine a constant instead of duplicating this literal "PREFIX ns: <" 7 times.(â„Ã8ïÛ‰ø­2
+java:S1192„"MDefine a constant instead of duplicating this literal "PREFIX ns: <" 7 times.(â„Ã8ïÛ‰ø­2
 ƒ
-java:S1192ş"`Define a constant instead of duplicating this literal " n'existe pas dans l'ontologie." 4 times.(Ö‡’Šøÿÿÿÿ8ïÛ‰ø­2
+java:S1192ù"`Define a constant instead of duplicating this literal " n'existe pas dans l'ontologie." 4 times.(Ö‡’Šøÿÿÿÿ8ïÛ‰ø­2
 n
-java:S1192®"KDefine a constant instead of duplicating this literal "individual" 5 times.(ßµàŒúÿÿÿÿ8ïÛ‰ø­2
+java:S1192©"KDefine a constant instead of duplicating this literal "individual" 5 times.(ßµàŒúÿÿÿÿ8ïÛ‰ø­2
 r
-java:S1192ä"OUse already-defined constant 'NAMESPACE' instead of duplicating its value here.(£Ù²ıÿÿÿÿ8ïÛ‰ø­2
-™
-java:S1192»"vDefine a constant instead of duplicating this literal "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " 9 times.(Œ‹¼±úÿÿÿÿ8ı½‰ø­2
+java:S1192½"OUse already-defined constant 'NAMESPACE' instead of duplicating its value here.(£Ù²ıÿÿÿÿ8ïÛ‰ø­2
+š
+java:S1192¶"wDefine a constant instead of duplicating this literal "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " 10 times.(Œ‹¼±úÿÿÿÿ8ı½‰ø­2
 w
-java:S1192­"TDefine a constant instead of duplicating this literal "SELECT ?individual " 3 times.(İ‡õ¸ûÿÿÿÿ8ğÛ‰ø­2
+java:S1192†"TDefine a constant instead of duplicating this literal "SELECT ?individual " 3 times.(İ‡õ¸ûÿÿÿÿ8ğÛ‰ø­2
 x
-java:S1192½"ZDefine a constant instead of duplicating this literal "SELECT ?property WHERE { " 4 times.(¸íÆè8ı½‰ø­2
+java:S1192¸"ZDefine a constant instead of duplicating this literal "SELECT ?property WHERE { " 4 times.(¸íÆè8ı½‰ø­2
 ˆ
-java:S1192Û"kDefine a constant instead of duplicating this literal "  ?property rdf:type owl:ObjectProperty . " 4 times.(ÍÚ£x8ğÛ‰ø­2
+java:S1192Ö"kDefine a constant instead of duplicating this literal "  ?property rdf:type owl:ObjectProperty . " 4 times.(ÍÚ£x8ğÛ‰ø­2
 W
-java:S3516ü"9Refactor this method to not always return the same value.(’ßÂ½8áŞ‰ø­2
+java:S3516÷"9Refactor this method to not always return the same value.(’ßÂ½8áŞ‰ø­2
 x
 java:S1450"VRemove the "scanner" field and declare it as a local variable in the relevant methods.(¤–êÂıÿÿÿÿ8ÉÕŞø­2
 G	java:S106$"+Replace this use of System.out by a logger.(¬…¸—8¼À‰ø­2
@@ -51,89 +51,92 @@ L	java:S106K"+Replace this use of System.out by a logger.(éû›Ñÿÿÿÿÿ8íŞ‰ø­2
 F	java:S106M"+Replace this use of System.out by a logger.(©‡Ü%8íŞ‰ø­2
 L	java:S106O"+Replace this use of System.out by a logger.(¢°éÉûÿÿÿÿ8îŞ‰ø­2
 L	java:S106V"+Replace this use of System.out by a logger.(éû›Ñÿÿÿÿÿ8îŞ‰ø­2
-L	java:S106i"+Replace this use of System.out by a logger.(î‡ó©ùÿÿÿÿ8ïŞ‰ø­2
-L	java:S106m"+Replace this use of System.out by a logger.(Óœ«úÿÿÿÿÿ8ïŞ‰ø­2
+L	java:S106d"+Replace this use of System.out by a logger.(î‡ó©ùÿÿÿÿ8ïŞ‰ø­2
+L	java:S106h"+Replace this use of System.out by a logger.(Óœ«úÿÿÿÿÿ8ïŞ‰ø­2
 D
-java:S3010r""Remove this assignment of "model".(­³Ì¨üÿÿÿÿ8ïŞ‰ø­2
+java:S3010m""Remove this assignment of "model".(­³Ì¨üÿÿÿÿ8ïŞ‰ø­2
 M
-java:S1874t"+Remove this use of "get"; it is deprecated.(Ô­“úÿÿÿÿ8ğŞ‰ø­2
-L	java:S106y"+Replace this use of System.out by a logger.(úüÀ¨øÿÿÿÿ8ñŞ‰ø­2
-L	java:S106{"+Replace this use of System.err by a logger.(œÿĞúÿÿÿÿ8ñŞ‰ø­2
-H	java:S106‰"+Replace this use of System.out by a logger.(üû½Å8òŞ‰ø­2
-H	java:S106‹"+Replace this use of System.out by a logger.(ä‰éª8òŞ‰ø­2
+java:S1874o"+Remove this use of "get"; it is deprecated.(Ô­“úÿÿÿÿ8ğŞ‰ø­2
+L	java:S106t"+Replace this use of System.out by a logger.(úüÀ¨øÿÿÿÿ8ñŞ‰ø­2
+L	java:S106v"+Replace this use of System.err by a logger.(œÿĞúÿÿÿÿ8ñŞ‰ø­2
+H	java:S106„"+Replace this use of System.out by a logger.(üû½Å8òŞ‰ø­2
+H	java:S106†"+Replace this use of System.out by a logger.(ä‰éª8òŞ‰ø­2
 _
-java:S1854–"ARemove this useless assignment to local variable "classResource".(¤Ğ££8óŞ‰ø­2
+java:S1854‘"ARemove this useless assignment to local variable "classResource".(¤Ğ££8óŞ‰ø­2
 P
-java:S1481–"2Remove this unused "classResource" local variable.(¤Ğ££8ôŞ‰ø­2
+java:S1481‘"2Remove this unused "classResource" local variable.(¤Ğ££8ôŞ‰ø­2
 N
-java:S1874­"+Remove this use of "get"; it is deprecated.(Ô­“úÿÿÿÿ8õŞ‰ø­2
-M	java:S106¯"+Replace this use of System.out by a logger.(Ç³”Øüÿÿÿÿ8õŞ‰ø­2
-H	java:S106°"+Replace this use of System.out by a logger.(¶ÓÜ8ÈÀ‰ø­2
-M	java:S106²"+Replace this use of System.err by a logger.(œÿĞúÿÿÿÿ8öŞ‰ø­2
-H	java:S106Ğ"+Replace this use of System.out by a logger.(Ç‹Ğé8÷Ş‰ø­2
-M	java:S106í"+Replace this use of System.out by a logger.(Œ§ó¼úÿÿÿÿ8ùŞ‰ø­2
-M	java:S106‡"+Replace this use of System.out by a logger.(ïºŸúÿÿÿÿ8ûŞ‰ø­2
-M	java:S106‰"+Replace this use of System.err by a logger.(ßİ¹æúÿÿÿÿ8ûŞ‰ø­2
-G	java:S106Ì"+Replace this use of System.out by a logger.(Â£Çx8şŞ‰ø­2
-M	java:S106Ş"+Replace this use of System.out by a logger.(¤Ó¯şÿÿÿÿÿ8şŞ‰ø­2
-M	java:S106â"+Replace this use of System.out by a logger.(¸”çÎşÿÿÿÿ8ÿŞ‰ø­2
-M	java:S106ô"+Replace this use of System.out by a logger.(¤Ó¯şÿÿÿÿÿ8ÿŞ‰ø­2
-M	java:S106ş"+Replace this use of System.out by a logger.(Ö‡’Šøÿÿÿÿ8€ß‰ø­2
-M	java:S106§"+Replace this use of System.out by a logger.(ıú™€ûÿÿÿÿ8ß‰ø­2
-M	java:S106²"+Replace this use of System.out by a logger.(Ö‡’Šøÿÿÿÿ8‚ß‰ø­2
-M	java:S106¹"+Replace this use of System.out by a logger.(—ÏŞ½ûÿÿÿÿ8‚ß‰ø­2
-M	java:S106¿"+Replace this use of System.out by a logger.(ÁÁÃ‰ıÿÿÿÿ8ƒß‰ø­2
-M	java:S106Ä"+Replace this use of System.out by a logger.(®Ä®ïûÿÿÿÿ8ƒß‰ø­2
-M	java:S106É"+Replace this use of System.out by a logger.(Ïâğçÿÿÿÿÿ8„ß‰ø­2
-H	java:S106ã"+Replace this use of System.out by a logger.(ò¶‡8…ß‰ø­2
-H	java:S106é"+Replace this use of System.out by a logger.(ø½™ş8…ß‰ø­2
-H	java:S106î"+Replace this use of System.out by a logger.(ü¡øÿ8†ß‰ø­2
-H	java:S106…"+Replace this use of System.out by a logger.(ï³·¯8‡ß‰ø­2
-M	java:S106"+Replace this use of System.out by a logger.(ÄÙªäüÿÿÿÿ8ˆß‰ø­2
-H	java:S106Ï"+Replace this use of System.out by a logger.(şƒ¨„8ß‰ø­2
-M	java:S106Ò"+Replace this use of System.out by a logger.(¦ßÁ‡ûÿÿÿÿ8ß‰ø­2
-M	java:S106Ù"+Replace this use of System.out by a logger.(—È¼›şÿÿÿÿ8ß‰ø­2
-M	java:S106Ü"+Replace this use of System.out by a logger.(öÿ‡İùÿÿÿÿ8ß‰ø­2
-H	java:S106ã"+Replace this use of System.out by a logger.(öÈËÓ8‘ß‰ø­2
-H	java:S106æ"+Replace this use of System.out by a logger.(¾ÇØÁ8’ß‰ø­2
-H	java:S106î"+Replace this use of System.out by a logger.(ß¢8“ß‰ø­2
-H	java:S106ñ"+Replace this use of System.out by a logger.(ĞÁĞš8”ß‰ø­2
-M	java:S106„"+Replace this use of System.out by a logger.(³¨ÇÏøÿÿÿÿ8™ß‰ø­2
-M	java:S106’"+Replace this use of System.out by a logger.(À·œùÿÿÿÿÿ8›ß‰ø­2
+java:S1874¨"+Remove this use of "get"; it is deprecated.(Ô­“úÿÿÿÿ8õŞ‰ø­2
+M	java:S106ª"+Replace this use of System.out by a logger.(Ç³”Øüÿÿÿÿ8õŞ‰ø­2
+H	java:S106«"+Replace this use of System.out by a logger.(¶ÓÜ8ÈÀ‰ø­2
+M	java:S106­"+Replace this use of System.err by a logger.(œÿĞúÿÿÿÿ8öŞ‰ø­2
+H	java:S106Ë"+Replace this use of System.out by a logger.(Ç‹Ğé8÷Ş‰ø­2
+M	java:S106è"+Replace this use of System.out by a logger.(Œ§ó¼úÿÿÿÿ8ùŞ‰ø­2
+M	java:S106‚"+Replace this use of System.out by a logger.(ïºŸúÿÿÿÿ8ûŞ‰ø­2
+M	java:S106„"+Replace this use of System.err by a logger.(ßİ¹æúÿÿÿÿ8ûŞ‰ø­2
+G	java:S106Ç"+Replace this use of System.out by a logger.(Â£Çx8şŞ‰ø­2
+M	java:S106Ù"+Replace this use of System.out by a logger.(¤Ó¯şÿÿÿÿÿ8şŞ‰ø­2
+M	java:S106İ"+Replace this use of System.out by a logger.(¸”çÎşÿÿÿÿ8ÿŞ‰ø­2
+M	java:S106ï"+Replace this use of System.out by a logger.(¤Ó¯şÿÿÿÿÿ8ÿŞ‰ø­2
+M	java:S106ù"+Replace this use of System.out by a logger.(Ö‡’Šøÿÿÿÿ8€ß‰ø­2
+M	java:S106¢"+Replace this use of System.out by a logger.(ıú™€ûÿÿÿÿ8ß‰ø­2
+M	java:S106­"+Replace this use of System.out by a logger.(Ö‡’Šøÿÿÿÿ8‚ß‰ø­2
+M	java:S106´"+Replace this use of System.out by a logger.(—ÏŞ½ûÿÿÿÿ8‚ß‰ø­2
+M	java:S106º"+Replace this use of System.out by a logger.(ÁÁÃ‰ıÿÿÿÿ8ƒß‰ø­2
+M	java:S106¿"+Replace this use of System.out by a logger.(®Ä®ïûÿÿÿÿ8ƒß‰ø­2
+M	java:S106Ä"+Replace this use of System.out by a logger.(Ïâğçÿÿÿÿÿ8„ß‰ø­2
+H	java:S106Ş"+Replace this use of System.out by a logger.(ò¶‡8…ß‰ø­2
+H	java:S106ä"+Replace this use of System.out by a logger.(ø½™ş8…ß‰ø­2
+H	java:S106é"+Replace this use of System.out by a logger.(ü¡øÿ8†ß‰ø­2
+H	java:S106€"+Replace this use of System.out by a logger.(ï³·¯8‡ß‰ø­2
+M	java:S106ˆ"+Replace this use of System.out by a logger.(ÄÙªäüÿÿÿÿ8ˆß‰ø­2
+R
+java:S1172È"4Remove this unused method parameter "selectedClass".(ıÊÎË8œß‰ø­2
+M	java:S106Ù"+Replace this use of System.out by a logger.(³¨ÇÏøÿÿÿÿ8øòâù­2
+M	java:S106ç"+Replace this use of System.out by a logger.(À·œùÿÿÿÿÿ8úòâù­2
+H	java:S106ê"+Replace this use of System.out by a logger.(Ş¾¤´8úòâù­2
 I
-java:S1874š"+Remove this use of "get"; it is deprecated.(şê€û8•ß‰ø­2
+java:S1874ó"+Remove this use of "get"; it is deprecated.(şê€û8•ß‰ø­2
 O
-java:S1874š"1Remove this use of "loadModel"; it is deprecated.(şê€û8•ß‰ø­2
+java:S1874ó"1Remove this use of "loadModel"; it is deprecated.(şê€û8•ß‰ø­2
 I
-java:S1874¦"+Remove this use of "get"; it is deprecated.(‘ğºˆ8—ß‰ø­2
+java:S1874ÿ"+Remove this use of "get"; it is deprecated.(‘ğºˆ8—ß‰ø­2
 O
-java:S1874¦"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8—ß‰ø­2
-H	java:S106½"+Replace this use of System.out by a logger.(À—š8›ß‰ø­2
+java:S1874ÿ"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8—ß‰ø­2
+H	java:S106–"+Replace this use of System.out by a logger.(À—š8ûòâù­2
 I
-java:S1874Ç"+Remove this use of "get"; it is deprecated.(‘ğºˆ8™ß‰ø­2
+java:S1874 "+Remove this use of "get"; it is deprecated.(‘ğºˆ8™ß‰ø­2
 O
-java:S1874Ç"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8™ß‰ø­2
-H	java:S106â"+Replace this use of System.out by a logger.(´ß¼8ß‰ø­2
-H	java:S106ä"+Replace this use of System.out by a logger.(Ã”Ôƒ8ß‰ø­2
+java:S1874 "1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8™ß‰ø­2
+H	java:S106»"+Replace this use of System.out by a logger.(´ß¼8ûòâù­2
+H	java:S106½"+Replace this use of System.out by a logger.(Ã”Ôƒ8ıòâù­2
 W
-java:S1172ê"4Remove this unused method parameter "selectedClass".(›ïƒÔÿÿÿÿÿ8œß‰ø­2
+java:S1172Ã"4Remove this unused method parameter "selectedClass".(›ïƒÔÿÿÿÿÿ8‰¡ğù­2
 I
-java:S1874ë"+Remove this use of "get"; it is deprecated.(‘ğºˆ8œß‰ø­2
+java:S1874Ä"+Remove this use of "get"; it is deprecated.(‘ğºˆ8œß‰ø­2
 O
-java:S1874ë"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8ß‰ø­2
-M	java:S106‡"+Replace this use of System.out by a logger.(¡û¹öÿÿÿÿÿ8¡ß‰ø­2
-H	java:S106Š"+Replace this use of System.out by a logger.(œË¤·8¡ß‰ø­2
+java:S1874Ä"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8ß‰ø­2
+M	java:S106à"+Replace this use of System.out by a logger.(¡û¹öÿÿÿÿÿ8ıòâù­2
+H	java:S106ã"+Replace this use of System.out by a logger.(œË¤·8şòâù­2
 I
-java:S1874–"+Remove this use of "get"; it is deprecated.(‘ğºˆ8Ÿß‰ø­2
+java:S1874ï"+Remove this use of "get"; it is deprecated.(‘ğºˆ8Ÿß‰ø­2
 O
-java:S1874–"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8 ß‰ø­2
-M	java:S106¸"+Replace this use of System.out by a logger.(“‹»µüÿÿÿÿ8£ß‰ø­2
-H	java:S106½"+Replace this use of System.out by a logger.(âı™Ï8£ß‰ø­2
-H	java:S106Û"+Replace this use of System.out by a logger.(é©â8¤ß‰ø­2
-M	java:S106İ"+Replace this use of System.out by a logger.(“¿ô¦ûÿÿÿÿ8¥ß‰ø­2
-M	java:S106ß"+Replace this use of System.out by a logger.(ØÑÙÿÿÿÿÿ8Æû²ø­2
+java:S1874ï"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8 ß‰ø­2
+M	java:S106‘"+Replace this use of System.out by a logger.(“‹»µüÿÿÿÿ8şòâù­2
+H	java:S106–"+Replace this use of System.out by a logger.(âı™Ï8şòâù­2
+H	java:S106´"+Replace this use of System.out by a logger.(é©â8ÿòâù­2
+M	java:S106¶"+Replace this use of System.out by a logger.(“¿ô¦ûÿÿÿÿ8¡ğù­2
+M	java:S106¸"+Replace this use of System.out by a logger.(ØÑÙÿÿÿÿÿ8¡ğù­2
 I
-java:S1874ã"+Remove this use of "get"; it is deprecated.(‘ğºˆ8¤ß‰ø­2
+java:S1874¼"+Remove this use of "get"; it is deprecated.(‘ğºˆ8¤ß‰ø­2
 O
-java:S1874ã"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8¤ß‰ø­2
-H	java:S106ú"+Replace this use of System.out by a logger.(„áÒÚ8Çû²ø­2
+java:S1874¼"1Remove this use of "loadModel"; it is deprecated.(‘ğºˆ8¤ß‰ø­2
+H	java:S106Ó"+Replace this use of System.out by a logger.(„áÒÚ8¡ğù­2
+H	java:S106ê"+Replace this use of System.out by a logger.(Õ—êí8øê»€®2
+M	java:S106ó"+Replace this use of System.out by a logger.(Óà†ûÿÿÿÿ8ùê»€®2
+R
+java:S1144ñ"/Remove this unused private "getClasses" method.(û©“úúÿÿÿÿ8¡ğù­2
+X
+java:S1144ı":Remove this unused private "getIndividualsInClass" method.(«è°á8¡ğù­2
+g
+java:S1144Ã"DRemove this unused private "getTargetClassForObjectProperty" method.(›ïƒÔÿÿÿÿÿ8‘¡ğù­2

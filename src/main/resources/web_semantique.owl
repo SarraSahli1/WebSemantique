@@ -23,14 +23,14 @@
       <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ObjectifRéductionCarbone"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#bus">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TransportEnCommun"/>
-    </rdfs:subClassOf>
-  </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#PanneauxSolaire">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ProductionEnergie"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#bus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TransportEnCommun"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#électriques">
@@ -44,10 +44,9 @@
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#BilanMensuel">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#BilanÉnergie"/>
   </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Device"/>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#LaveLinge">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Device"/>
-    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Device"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#AideRénovationÉnergétique">
     <rdfs:subClassOf>
@@ -87,12 +86,12 @@
       <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#EnergieNonRenouvelable"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Facture_Énergie"/>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#EnergieNonRenouvelable">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#SourceEnergie"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Facture_Énergie"/>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ContratÉlectricité">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ContratÉnergie"/>
@@ -154,14 +153,14 @@
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ObjectifMensuel">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ObjectifRéductionCarbone"/>
   </owl:Class>
-  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TransportDurable">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Transport"/>
-    </rdfs:subClassOf>
-  </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Metro">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TransportNonDurable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TransportDurable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Transport"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Four">
@@ -224,10 +223,10 @@
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Moto">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TransportNonDurable"/>
   </owl:Class>
-  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#User"/>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Source_Énergie_Renouvelable">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#SourceEnergie"/>
   </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#User"/>
   <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#l&apos;éolien">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Source_Énergie_Renouvelable"/>
   </owl:Class>
@@ -278,13 +277,6 @@
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#l&apos;hydroélectricité"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#SourceEnergie"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#aFacture">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#User"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifÉnergieRenouvelable"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifHoraire"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifFixe"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Facture_Énergie"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#aPourSource">
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#MaisonIndividuelle"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Climatiseur"/>
@@ -299,6 +291,13 @@
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#charbon"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Appartement"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Réfrigérateur"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#aFacture">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifÉnergieRenouvelable"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifHoraire"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifFixe"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Facture_Énergie"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#donneFeedbackSur">
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#OptimisationElectroménagers"/>
@@ -572,9 +571,9 @@
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Moto"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#VoitureÉlectrique"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Device"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Train"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#bus"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Disel"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Train"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Émise_par">
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#TarifÉnergieRenouvelable"/>
@@ -630,14 +629,14 @@
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#distance_parcourue">
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Transport"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#description_du_conseil">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ConseilEconomieEnergie"/>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#date">
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Feedback"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Facture_Énergie"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Consommation_Énergie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#description_du_conseil">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ConseilEconomieEnergie"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#type_Logement">
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Logement"/>
@@ -705,12 +704,12 @@
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Device"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Consommation_Énergie"/>
   </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#fournisseur">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ConseilEconomieEnergie"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#nom_du_fournisseur">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#FournisseurEnergie"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#fournisseur">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#ConseilEconomieEnergie"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#économie_potentielle_(kWh_ou_CO2)">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -754,9 +753,9 @@
   <untitled-ontology-13:PanneauxSolaire rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Panneaux_Solaire1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </untitled-ontology-13:PanneauxSolaire>
-  <untitled-ontology-13:Appartement rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#appartement1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </untitled-ontology-13:Appartement>
-  <untitled-ontology-13:BilanMensuel rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#BM">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </untitled-onto
+  <untitled-ontology-13:Feedback rdf:about="http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#Feedback1">
+    <untitled-ontology-13:score>3</untitled-ontology-13:score>
+    <untitled-ontology-13:commentaire>J'ai beaucoup aimé!</untitled-ontology-13:commentaire>
+    <untitled-ontology-13:date>31/10/2024</untitled-ontology-13:date>
+  </untitled-ontology-13:Feedback>
+  <owl:Name

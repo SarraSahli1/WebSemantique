@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class OntologyManager {
     private static Scanner scanner = new Scanner(System.in); // Initialize the scanner
 
-    private static final String ONTOLOGY_PATH = "src/main/resources/webbb3.owl";
+    private static final String ONTOLOGY_PATH = "src/main/resources/web_semantique.owl";
     private static final String NAMESPACE = "http://www.semanticweb.org/asus/ontologies/2024/9/untitled-ontology-13#";
     private static Model model;
 
@@ -91,12 +91,7 @@ public class OntologyManager {
 
 
 
-                case 5:
-                    addOrUpdateObjectProperty(scanner, true); // true pour ajouter
-                    break;
-                case 6:
-                    addOrUpdateObjectProperty(scanner, false); // false pour mettre à jour
-                    break;
+
                 case 7:
                     deleteObjectProperty(scanner);
                     break;
@@ -586,78 +581,44 @@ public class OntologyManager {
 
 
 
-    private static void addOrUpdateObjectProperty(Scanner scanner, boolean isAdd) {
-        // Étape 1 : Sélectionner une classe
-        System.out.println("Sélectionnez une classe :");
-        List<String> classes = getClasses(); // Méthode à implémenter
-        for (int i = 0; i < classes.size(); i++) {
-            System.out.println((i + 1) + ". " + classes.get(i));
+    public static void addOrUpdateObjectProperty(String selectedClass, String selectedIndividual,
+                                                 String selectedProperty, String selectedTargetIndividual,
+                                                 boolean isAdd) {
+        try {
+            // Ajout ou mise à jour de la propriété d'objet avec SPARQL
+            Dataset dataset = DatasetFactory.create(model); // Conversion du modèle en Dataset
+
+            // Si c'est une mise à jour, supprimer l'ancienne relation
+            if (!isAdd) {
+                String sparqlDelete = "PREFIX ns: <" + NAMESPACE + "> " +
+                        "DELETE { ns:" + selectedIndividual + " ns:" + selectedProperty + " ?o } " +
+                        "WHERE { ns:" + selectedIndividual + " ns:" + selectedProperty + " ?o }";
+
+                UpdateRequest deleteRequest = UpdateFactory.create(sparqlDelete);
+                UpdateProcessor deleteProcessor = UpdateExecutionFactory.create(deleteRequest, dataset);
+                deleteProcessor.execute();
+
+                System.out.println("Ancienne propriété d'objet supprimée pour " + selectedIndividual);
+            }
+
+            // Ajout de la nouvelle relation
+            String sparqlInsert = "PREFIX ns: <" + NAMESPACE + "> " +
+                    "INSERT { ns:" + selectedIndividual + " ns:" + selectedProperty + " ns:" + selectedTargetIndividual + " } " +
+                    "WHERE { }";
+
+            UpdateRequest insertRequest = UpdateFactory.create(sparqlInsert);
+            UpdateProcessor insertProcessor = UpdateExecutionFactory.create(insertRequest, dataset);
+            insertProcessor.execute();
+
+            saveOntology(); // Sauvegarder l'ontologie après la mise à jour ou l'ajout
+
+            System.out.println("Propriété d'objet " + (isAdd ? "ajoutée" : "mise à jour") +
+                    " entre " + selectedIndividual + " et " + selectedTargetIndividual);
+        } catch (Exception e) {
+            System.out.println("Une erreur s'est produite : " + e.getMessage());
         }
-        int classChoice = scanner.nextInt() - 1;
-        scanner.nextLine(); // consommer la ligne
-        String selectedClass = classes.get(classChoice);
-
-        // Étape 2 : Sélectionner un individu dans la classe choisie
-        System.out.println("Sélectionnez un individu dans la classe " + selectedClass + " :");
-        List<String> individuals = getIndividualsInClass(selectedClass); // Méthode à implémenter
-        for (int i = 0; i < individuals.size(); i++) {
-            System.out.println((i + 1) + ". " + individuals.get(i));
-        }
-        int individualChoice = scanner.nextInt() - 1;
-        scanner.nextLine(); // consommer la ligne
-        String selectedIndividual = individuals.get(individualChoice);
-
-        // Étape 3 : Sélectionner une propriété d'objet associée à la classe
-        System.out.println("Sélectionnez une propriété d'objet pour " + selectedClass + " :");
-        List<String> objectProperties = getObjectPropertiesForClass(selectedClass); // Méthode à implémenter
-        for (int i = 0; i < objectProperties.size(); i++) {
-            System.out.println((i + 1) + ". " + objectProperties.get(i));
-        }
-        int propertyChoice = scanner.nextInt() - 1;
-        scanner.nextLine(); // consommer la ligne
-        String selectedProperty = objectProperties.get(propertyChoice);
-
-        // Étape 4 : Sélectionner un individu cible dans la classe liée
-        String targetClass = getTargetClassForObjectProperty(selectedClass, selectedProperty); // Méthode à implémenter
-        System.out.println("Sélectionnez un individu dans la classe liée " + targetClass + " :");
-        List<String> targetIndividuals = getIndividualsInClass(targetClass); // Méthode à implémenter
-        for (int i = 0; i < targetIndividuals.size(); i++) {
-            System.out.println((i + 1) + ". " + targetIndividuals.get(i));
-        }
-        int targetIndividualChoice = scanner.nextInt() - 1;
-        scanner.nextLine(); // consommer la ligne
-        String selectedTargetIndividual = targetIndividuals.get(targetIndividualChoice);
-
-        // Ajout ou mise à jour de la propriété d'objet avec SPARQL
-        Dataset dataset = DatasetFactory.create(model); // Conversion du modèle en Dataset
-
-        // Si c'est une mise à jour, supprimer l'ancienne relation
-        if (!isAdd) {
-            String sparqlDelete = "PREFIX ns: <" + NAMESPACE + "> " +
-                    "DELETE { ns:" + selectedIndividual + " ns:" + selectedProperty + " ?o } " +
-                    "WHERE { ns:" + selectedIndividual + " ns:" + selectedProperty + " ?o }";
-
-            UpdateRequest deleteRequest = UpdateFactory.create(sparqlDelete);
-            UpdateProcessor deleteProcessor = UpdateExecutionFactory.create(deleteRequest, dataset);
-            deleteProcessor.execute();
-
-            System.out.println("Ancienne propriété d'objet supprimée pour " + selectedIndividual);
-        }
-
-        // Ajout de la nouvelle relation
-        String sparqlInsert = "PREFIX ns: <" + NAMESPACE + "> " +
-                "INSERT { ns:" + selectedIndividual + " ns:" + selectedProperty + " ns:" + selectedTargetIndividual + " } " +
-                "WHERE { }";
-
-        UpdateRequest insertRequest = UpdateFactory.create(sparqlInsert);
-        UpdateProcessor insertProcessor = UpdateExecutionFactory.create(insertRequest, dataset);
-        insertProcessor.execute();
-
-        saveOntology(); // Sauvegarder l'ontologie après la mise à jour ou l'ajout
-
-        System.out.println("Propriété d'objet " + (isAdd ? "ajoutée" : "mise à jour") +
-                " entre " + selectedIndividual + " et " + selectedTargetIndividual);
     }
+
 
     // Exemple de méthodes à implémenter pour obtenir les données de l'ontologie
 
@@ -706,7 +667,7 @@ public class OntologyManager {
     }
 
     // Méthode pour récupérer les individus d'une classe donnée
-    private static List<String> getObjectPropertiesForClass(String className) {
+    static List<String> getObjectPropertiesForClass(String className) {
         List<String> objectProperties = new ArrayList<>();
         Model model = FileManager.get().loadModel(ONTOLOGY_PATH);
 
@@ -890,7 +851,41 @@ public class OntologyManager {
         System.out.println("Deleted object property.");
     }
 
+    public static List<String> getAllPropertiesForIndividual(String className, String individualName) {
+        List<String> properties = new ArrayList<>();
 
+        // SPARQL query to retrieve properties of the individual
+        String sparqlQuery =
+                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+                        "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+                        "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
+                        "SELECT ?property ?targetIndividual " +
+                        "WHERE { " +
+                        "  ?individual rdf:type <" + NAMESPACE + className + "> . " +
+                        "  ?individual ?property ?targetIndividual . " +
+                        "  FILTER (?individual = <" + NAMESPACE + individualName + ">) " +
+                        "}";
+
+        // Execute the SPARQL query
+        Query query = QueryFactory.create(sparqlQuery);
+        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
+            ResultSet results = qexec.execSelect();
+            if (!results.hasNext()) {
+                System.out.println("No properties found for individual: " + individualName);
+            }
+            while (results.hasNext()) {
+                QuerySolution sol = results.nextSolution();
+                String propertyName = sol.getResource("property").getLocalName();
+                String targetIndividualName = sol.getResource("targetIndividual").getLocalName();
+                properties.add(propertyName + " " + targetIndividualName);
+            }
+        } catch (Exception e) {
+            System.out.println("Error while executing SPARQL query: " + e.getMessage());
+        }
+
+        // Return the list of properties
+        return properties;
+    }
 
 }
 

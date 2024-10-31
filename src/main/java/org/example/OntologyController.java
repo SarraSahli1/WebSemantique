@@ -126,4 +126,56 @@ public class OntologyController {
                     .body("Erreur lors de la suppression de l'individu : " + e.getMessage());
         }
     }
+    @PostMapping("/property")
+    public ResponseEntity<String> addOrUpdateObjectProperty(
+            @RequestParam String className,
+            @RequestParam String individualName,
+            @RequestParam String propertyName,
+            @RequestParam String targetIndividualName,
+            @RequestParam boolean isAdd) {
+        try {
+            // Delegate the logic to the service layer
+            OntologyManager.addOrUpdateObjectProperty(className, individualName, propertyName, targetIndividualName, isAdd);
+            return ResponseEntity.ok("Propriété d'objet " + (isAdd ? "ajoutée" : "mise à jour") + " avec succès.");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Erreur lors de l'ajout ou de la mise à jour de la propriété d'objet : " + e.getMessage());
+        }
+    }
+
+    @GetMapping("/objectprop/{className}")
+    public ResponseEntity<List<String>> getObjectPropertiesForClass(@PathVariable String className) {
+        List<String> objectProperties;
+        try {
+            objectProperties = OntologyManager.getObjectPropertiesForClass(className); // Call your method here
+            if (objectProperties.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body(objectProperties); // No properties found
+            }
+            return ResponseEntity.ok(objectProperties); // Return found properties
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null); // Internal server error
+        }
+    }
+
+    @GetMapping("/seeproperties")
+    public ResponseEntity<List<String>> getAllPropertiesForIndividual(
+            @RequestParam String className,
+            @RequestParam String individualName) {
+        // Validate parameters
+        if (className == null || className.isEmpty() || individualName == null || individualName.isEmpty()) {
+            return ResponseEntity.badRequest().body(List.of("Class name and individual name are required."));
+        }
+
+        try {
+            // Call the service to get properties for the individual
+            List<String> properties = OntologyManager.getAllPropertiesForIndividual(className, individualName);
+            return ResponseEntity.ok(properties);
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(List.of("Error retrieving properties: " + e.getMessage()));
+        }
+    }
+
 }
